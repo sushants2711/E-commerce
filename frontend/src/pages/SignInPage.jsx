@@ -6,6 +6,13 @@ export const SignInPage = () => {
 
   const navigate = useNavigate();
 
+  useEffect(()=> {
+    const token = localStorage.getItem('token')
+    if(token) {
+      navigate("/")
+    }
+  },)
+
   const [signInState, setSignInState] = useState({
     name: "",
     email: "",
